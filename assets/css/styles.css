@@ -1346,6 +1346,14 @@ body.is-locked { overflow: hidden; }
 .pill-link--primary:hover { background: #fff; color: #080B14; }
 .pill-link .icon { width: 0.9em; height: 0.9em; }
 
+.pill-link__lock {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.1rem;
+  color: #FCD34D;
+  opacity: 0.9;
+}
+
 .project--soon { opacity: 0.92; }
 .project--soon .project__media { filter: grayscale(0.35); }
 

@@ -82,6 +82,7 @@
       image: 'assets/img/projects/linear-algebra.jpg',
       links: [
         { label: 'Live demo', href: 'https://linearalgebraplayground-blond.vercel.app', primary: true, external: true },
+        { label: 'Preview build', href: 'https://linearalgebraplayground-2me63e575-pari-gull.vercel.app', external: true, requiresLogin: true },
         { label: 'Source code', href: 'https://github.com/Parigull/Linear_Algebra_-playground-', external: true },
       ],
     },
@@ -175,9 +176,10 @@
     const links = (p.links || [])
       .map(
         (l) => `<a class="pill-link${l.primary ? ' pill-link--primary' : ''}" href="${l.href}"
-          ${l.external ? 'target="_blank" rel="noopener noreferrer"' : ''}>
+          ${l.external ? 'target="_blank" rel="noopener noreferrer"' : ''}
+          ${l.requiresLogin ? 'title="Opens a Vercel sign-in screen — a Vercel account is required to view this preview build"' : ''}>
           <svg class="icon" aria-hidden="true"><use href="${l.label.toLowerCase().includes('source') ? ICON.code : ICON.external}"/></svg>
-          ${escapeHtml(l.label)}</a>`
+          ${escapeHtml(l.label)}${l.requiresLogin ? '<svg class="icon pill-link__lock" aria-hidden="true"><use href="#i-lock"/></svg>' : ''}</a>`
       )
       .join('');
 
