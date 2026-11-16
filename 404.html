@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#080B14" />
+<title>Page not found — Pari Gull</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/my_portfolio/assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/my_portfolio/assets/css/styles.css" />
+<style>
+  .nf {
+    min-height: 100dvh;
+    display: grid;
+    align-content: center;
+    gap: 1.5rem;
+    padding-block: clamp(3rem, 12vw, 8rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .nf::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10%;
+    background: radial-gradient(circle at 25% 20%, rgba(139, 92, 246, 0.28), transparent 55%),
+                radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.18), transparent 55%);
+    filter: blur(60px);
+    z-index: -1;
+  }
+  .nf__code {
+    font-family: var(--font-mono);
+    font-size: clamp(5rem, 22vw, 13rem);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+    background: linear-gradient(180deg, #fff 25%, rgba(139, 92, 246, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .nf h1 { font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: -0.03em; }
+  .nf p { color: var(--text-secondary); max-width: 44ch; }
+  .nf__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+  <main class="shell nf" id="main">
+    <p class="section__eyebrow mono"><span>404</span> Not found</p>
+    <p class="nf__code" aria-hidden="true">404</p>
+    <h1>This page doesn't exist.</h1>
+    <p>The link may be out of date, or the page has moved. Everything worth seeing is one click away.</p>
+    <div class="nf__actions">
+      <a class="btn btn--primary" href="/my_portfolio/">Back to home</a>
+      <a class="btn btn--outline" href="/my_portfolio/#work">See the projects</a>
+      <a class="btn btn--ghost" href="/my_portfolio/#contact">Get in touch</a>
+    </div>
+    <p class="mono" style="font-size:.66rem;color:var(--text-dim);margin-top:1.5rem">Pari Gull — Web Developer | Data Analyst | Problem Solver</p>
+  </main>
+</body>
+</html>
